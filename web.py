@@ -13,6 +13,7 @@ def add_todo():
     if todo.strip():
         todos.append(todo)
         managment.save_to_txt(todos)
+    st.session_state["new_todo"] = ""
     
 
 st.title("Tasks list App")
